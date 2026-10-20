@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+weather_belgium.csv
+weather_namur.csv
