@@ -22,6 +22,26 @@ The database uses UPSERT to avoid duplicate records.
 - SQL
 - Git
 
+## Database (PostgreSQL)
+
+The project uses a PostgreSQL database named weather_db.
+
+The SQL script sql/schema.sql creates the weather_observations table, which stores:
+
+City
+
+Observation date and time
+
+Temperature (°C)
+
+Precipitation (mm)
+
+To create the table, first create the database and a user with the required permissions, then run:
+
+psql -h localhost -U weather_user -d weather_db -f sql/schema.sql
+
+A unique constraint on (city, observed_at) prevents duplicate observations.
+
 ## Run the project
 
 Install dependencies:
